@@ -1,0 +1,27 @@
+
+<div class="content">
+    <div class="center">
+        <div matTooltip="{{person.name}}" matTooltipClass="tooltip"> 
+            {{ person?.name?.length > 20 ? (person?.name | slice:0:20 ) + '..' : person?.name }} 
+        </div> 
+    </div>
+    <div class="center">
+        <div matTooltip="{{person.age}} years"> 
+            {{person?.age}} years 
+        </div>
+    </div>
+    <div class="center">
+        <div matTooltip="{{person.city}}"> 
+            {{ person?.city?.length > 20 ? (person?.city | slice:0:20 ) + '..' : person?.city }} 
+        </div>
+    </div>
+    <div class="center">
+        <div matTooltip="{{person.country}}"> 
+            {{ person?.country?.length > 20 ? (person?.country | slice:0:20 ) + '..' : person?.country }} 
+        </div>
+    </div>
+    <div class="center">
+        <button mat-button color="accent" (click)="update.emit(person)"><mat-icon>update</mat-icon>Change</button>
+        <button mat-button color="warn" (click)="delete.emit(person)"><mat-icon>delete</mat-icon>Remove</button>
+    </div>
+</div>

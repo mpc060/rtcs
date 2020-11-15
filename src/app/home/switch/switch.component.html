@@ -1,0 +1,49 @@
+<div class="flex">
+  <div class="header" fxLayout="row" fxLayoutAlign="space-between center fxFill">
+    <div class="icon"></div>
+    <div class="title" fxLayout="row" fxLayoutAlign="space-around center fxFill">
+      RTCS
+    </div>
+    <div class="date" fxLayout="row" fxLayoutAlign="space-around center fxFill">
+      <div>{{ date | date: 'dd/MM/yyy' }}</div>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <mat-tab-group dynamicHeight>
+    <mat-tab label="Finance Monitor">
+      <div class="finance-list">
+        <app-finance></app-finance> 
+      </div>
+    </mat-tab>
+    <mat-tab label="Users List">
+      <div class="users-list">
+        <div fxLayout="column" fxLayoutAlign="start center"> 
+          <div fxLayout="column" fxLayoutAlign="start stretch" fxFlex="80" > 
+            <div fxLayout="row" fxLayoutAlign="center center" class="header-table" *ngIf="(people$ | async)?.length > 1">
+              <div class="header-title"> Name </div>
+              <div class="header-title"> Age </div>
+              <div class="header-title"> City </div>
+              <div class="header-title"> Country </div>
+              <div class="header-title"> Options </div>
+            </div>
+            <app-person *ngFor=" let p of people$ | async" 
+                        [person]="p" 
+                        (delete)=delete($event)
+                        (update)=update($event)>
+            </app-person>
+          </div>
+          <button class="button-add" mat-fab color="primary" (click)="addNew()">New</button>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Issues Chart">
+      <div class="options-list">
+        <app-chart [mockData]="mockData"></app-chart> 
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<div class="flex">
+    <div class="footer" fxLayout="row" fxLayoutAlign="space-between center fxFill"></div>   
+</div>

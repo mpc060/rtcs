@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="container-title"> CURRENCIES </div>
+    <div class="content" >
+        <div class="column" *ngFor="let item of currencies">
+            <div class="section">
+                <div class="name"> {{ item?.name }} </div>
+            </div>
+            <div class="section">
+                <div class="title"> Buy </div>
+                <div class="value">
+                    <div class="val"> {{ item?.buy }}</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title"> Sell </div>
+                <div class="value">
+                    <div class="val"> {{ item?.sell || '-' }} </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title"> Variation </div>
+                <div class="value">
+                    <div class="val"> {{ item?.variation  }} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-title"> STOCKS </div>
+    <div class="content" >
+        <div class="column" *ngFor="let item of stocks">
+            <div class="section">
+                <div class="name"> {{ item?.name }} </div>
+            </div>
+            <div class="section">
+                <div class="title"> Variation </div>
+                <div class="value">
+                    <div class="val"> {{ item?.variation  }} </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title"> Points </div>
+                <div class="value">
+                    <div class="val"> {{ item?.points || '-'}}</div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="title"> Location </div>
+                <div class="value">
+                    <div class="val"> {{ item?.location  }} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

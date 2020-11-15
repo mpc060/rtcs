@@ -1,0 +1,87 @@
+.container {
+    height: calc(100vh - 240px);
+    .container-title {
+        color: var(--darkGray);
+        font-family: VagRounded;
+        font-size: 30px;
+        margin-left: 40px;
+        text-align: left;
+    }
+    .content {
+        height: 260px;
+        margin: 20px 40px 40px 40px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 60px;
+        >.column {
+            border-radius: 10px;
+            >.section {
+                height: 20%;
+                background: var(--darkGray);
+                display: grid;
+                align-content: center;
+                text-align: center;
+                >.name {
+                    font-size: 26px;
+                    color: var(--white);
+                    font-weight: bolder;
+                }
+            }
+            >.section:nth-child(2){
+                height: 26.6%;
+                display: grid;
+                align-content: center;
+                background: var(--blueSky);
+                >.title {
+                    color: var(--white);
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
+                >.value {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 28px;
+                    color: var(--white);
+                    font-weight: bolder;
+                }
+            }
+            >.section:nth-child(3){
+                height: 26.6%;
+                background: var(--blueMotion);
+                display: grid;
+                align-content: center;
+                >.title {
+                    color: var(--white);
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
+                >.value {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 28px;
+                    color: var(--white);
+                    font-weight: bolder;
+                }
+            }
+            >.section:nth-child(4){
+                height: 26.6%;
+                background: var(--blueGroove);
+                display: grid;
+                align-content: center;
+                >.title {
+                    color: var(--white);
+                    font-weight: bolder;
+                    font-size: 18px;
+                }
+                >.value {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 28px;
+                    color: var(--white);
+                    font-weight: bolder;
+                }
+            }
+        }
+    }
+}
+

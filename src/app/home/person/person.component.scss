@@ -1,0 +1,25 @@
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: var(--extraLightGray);
+    height: 40px;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.center {
+    text-align: center;
+    align-self: baseline;
+    padding-top: 2px;
+}
+::ng-deep .tooltip {
+    color: gray !important;
+    border-radius: 20px !important;
+    border: 1px solid gray;
+    background: white;
+    font-size: 15px;
+    padding: 25px !important;
+    margin-top: 20px !important;
+    position: relative !important;
+ }

@@ -1,0 +1,110 @@
+@mixin font {
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+.flex {
+    width: 100%;
+}
+.header {
+    background-color: var(--extraDarkGray);
+    width: 100%;
+    height: 9%;
+    padding-left: 40px;
+    position: fixed;
+    top: 0;
+}
+.content {
+    position: relative;
+    top: 9%;
+    bottom: 5%;
+    height: 86%;
+}
+.footer {
+    background-color: var(--extraDarkGray);
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+.icon {
+    background: url("/assets/icons/monitor.svg");
+    height: 50px;
+    width: 50px;
+    background-size: 50px;
+    @media (max-height: 800px){
+        height: 30px;
+        width: 30px;
+        background-size: 30px;
+    }
+}
+.title {
+    @include font;
+    font-family: VagRounded;
+    font-size: 45px;
+    color: var(--white);
+    @media (max-height: 800px){
+        font-size: 25px;
+    }
+  }
+.date {
+    width: 20%;
+    height: 100%;
+    background-color: var(--darkGray);
+}
+.date div {
+    @include font;
+    font-family: VagRounded;
+    font-size: 46px;
+    color: var(--white);
+    @media (max-height: 800px){
+        font-size: 26px;
+    }
+}
+.users-list {
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    margin-top: 20px;
+}
+.options-list {
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    margin-top: 100px; 
+    text-align: center;
+}
+.finance-list {
+    height: calc(100vh - 220px);
+    overflow-y: auto;
+    margin-top: 20px;
+}
+::ng-deep .mat-tab-label-content {
+    color: var(--black);
+}
+::ng-deep .mat-tab-label-container {
+    background: var(--extraLightGray);
+}
+::ng-deep .mat-ink-bar {
+    background-color: var(--darkGray) !important;
+}
+.header-table {
+    border: 1px solid var(--lightGray);
+    height: 40px;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+    background: white;
+}
+.header-title {
+    text-align: center;
+    color: var(--black);
+    width: 20%;
+}
+.button-add {
+    position: fixed;
+    right: 40px;
+}
